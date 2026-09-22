@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Привлеките капитал и масштабируйте бизнес: экспертный аудит (€350), сопровождение «Капитал Роста» (€1500/4 недели) и личное сопровождение привлечения до закрытия сделки (€4990) от Юрия Авсянника — основателя Deus Tech 2.0.">
+  <meta name="theme-color" content="#0A0D12">
+  <title>Юрий Авсянник — привлечение капитала и стратегия роста</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Юрий Авсянник — на главную">
+        <span class="brand__mark">ЮА</span>
+        <span class="brand__text">Юрий Авсянник</span>
+      </a>
+      <nav class="site-nav" aria-label="Навигация по странице">
+        <a href="#pains">С чем приходят</a>
+        <a href="#expertise">Экспертность</a>
+        <a href="#pricing">Услуги</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <button class="btn btn--accent btn--sm" data-open="modal-audit" data-track="cta_header">
+        Записаться на аудит
+      </button>
+      <button class="nav-burger" data-burger aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" data-mobile-menu>
+      <nav aria-label="Мобильная навигация">
+        <a href="#pains">С чем приходят</a>
+        <a href="#expertise">Экспертность</a>
+        <a href="#pricing">Услуги</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <button class="btn btn--accent" data-open="modal-audit" data-track="cta_mobile">Записаться на аудит</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================ 1. HERO ============================ -->
+    <section id="top" class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow"></div>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal">
+            <span class="dot-live"></span>
+            Консультации по фандрейзингу · Аудит и сопровождение
+          </p>
+          <h1 class="hero__title reveal" data-reveal-delay="80">
+            Привлеките капитал и масштабируйте бизнес с четкой стратегией и готовой инвестиционной упаковкой
+          </h1>
+          <p class="hero__subtitle reveal" data-reveal-delay="160">
+            Экспертный аудит и сопровождение от <strong>Юрия Авсянника</strong> — основателя Deus&nbsp;Tech&nbsp;2.0,
+            эксперта по привлечению инвестиций и выстраиванию бизнес-моделей.
+          </p>
+          <div class="hero__cta reveal" data-reveal-delay="240">
+            <button class="btn btn--accent btn--lg" data-open="modal-audit" data-track="cta_hero_primary">
+              <span>Записаться на аудит</span><span class="btn__price">€350</span>
+            </button>
+            <a class="btn btn--ghost btn--lg" href="#pricing" data-track="cta_hero_scroll">
+              Выбрать формат работы
+            </a>
+          </div>
+          <ul class="hero__proof reveal" data-reveal-delay="320">
+            <li><span class="hero__proof-num" data-counter="11">0</span><span>+ бизнес-моделей разработано и валидировано</span></li>
+            <li><span class="hero__proof-num">Idea → Seed</span><span>продукты от идеи до инвестиционной стадии</span></li>
+            <li><span class="hero__proof-num">€ млн</span><span>оценка масштабирования проектов</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" data-reveal-delay="200">
+          <figure class="portrait" data-photo-slot>
+            <!-- Основное фото. Альтернатива: img/slide2.webp -->
+            <img class="portrait__img" src="img/slide1.webp" alt="Юрий Авсянник — Founder &amp; CEO Deus Tech 2.0"
+                 width="480" height="600" fetchpriority="high" decoding="async">
+            <figcaption class="portrait__cap">
+              <span class="portrait__name">Юрий Авсянник</span>
+              <span class="portrait__role">Founder &amp; CEO Deus Tech 2.0</span>
+            </figcaption>
+            <span class="badge badge--verified">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 .7l1.6 1.2 2-.1 1.4 1.5 1.4 1.4-.4 2 1.2 1.6-1.2 1.6.4 2-1.4 1.4-2 .1-1.4 1.5L7 14.3 5.4 13l-2-.4-1.4-1.4-.4-.9-.5-1.4 1.1-1.5L.8 7 1.6 5.4l.2-2L4 2.1l2 .3L7 .7z" fill="currentColor"/><path d="M4.2 7l1.9 1.9L9.8 5.4" stroke="#0A0D12" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Подтвержденный опыт и статус
+            </span>
+            <span class="badge badge--stat">Сейчас: раунд $2M<br>Deus Tech 2.0</span>
+          </figure>
+          <div class="hero__socials">
+            <a class="btn--social" href="https://www.instagram.com/ausianikyury/" target="_blank" rel="noopener" data-track="social_instagram_hero" aria-label="Instagram Юрия Авсянника">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.7"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg>
+              Instagram
+            </a>
+            <a class="btn--social" href="https://www.linkedin.com/in/yury-ausianik-740a151b2/" target="_blank" rel="noopener" data-track="social_linkedin_hero" aria-label="LinkedIn Юрия Авсянника">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.2 8h4.6v15H.2V8zm7.6 0h4.4v2h.06c.61-1.16 2.11-2.38 4.35-2.38 4.65 0 5.5 3.06 5.5 7.04V23h-4.6v-7.7c0-1.84-.03-4.2-2.56-4.2-2.56 0-2.95 2-2.95 4.07V23H7.8V8z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 2. PAINS ============================ -->
+    <section id="pains" class="section section--pains">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Диагностика</p>
+          <h2 class="section__title">С чем чаще всего приходят предприниматели</h2>
+        </div>
+        <div class="pains__grid">
+          <article class="card pain-card reveal">
+            <span class="pain-card__num">01</span>
+            <h3>Непонятная финансовая потребность</h3>
+            <p>Бизнес работает, но нет понимания реальной unit-экономики и объема необходимых инвестиций.</p>
+          </article>
+          <article class="card pain-card reveal" data-reveal-delay="100">
+            <span class="pain-card__num">02</span>
+            <h3>Отказы и молчание инвесторов</h3>
+            <p>Отсутствует убедительный pitch deck, финансовая модель и прозрачное предложение инвестору (investor offer).</p>
+          </article>
+          <article class="card pain-card reveal" data-reveal-delay="200">
+            <span class="pain-card__num">03</span>
+            <h3>Хаос в поиске капитала</h3>
+            <p>Нет системного понимания, где искать венчурные фонды, ангелов, гранты или стратегических партнеров.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 3. EXPERTISE ============================ -->
+    <section id="expertise" class="section section--expertise">
+      <div class="container">
+        <div class="expertise__wrap">
+          <div class="section__head reveal">
+            <p class="section__label">Экспертность</p>
+            <h2 class="section__title">За плечами — реальный путь основателя, а не теория</h2>
+          </div>
+          <div class="expertise__cards">
+            <article class="card expertise-card reveal">
+              <span class="expertise-card__ico" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3.5 8.5l8.5-5 8.5 5v7l-8.5 5-8.5-5v-7z" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 8.5l8.5 5 8.5-5M12 13.5v7" stroke="currentColor" stroke-width="1.6"/></svg>
+              </span>
+              <h3>Founder &amp; CEO Deus Tech 2.0</h3>
+              <p>Управление технологическим стартапом и работа с европейскими грантовыми и инвестиционными институтами.</p>
+            </article>
+            <article class="card expertise-card reveal" data-reveal-delay="100">
+              <span class="expertise-card__ico" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3.5l7 3v5c0 4.1-2.5 7.6-7 9-4.5-1.4-7-4.9-7-9v-5l7-3z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12l2 2 4-4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </span>
+              <h3>Моделирование бизнес-моделей</h3>
+              <p>Разработка и валидация более <strong>11 бизнес-моделей</strong> для продуктов на разных стадиях развития.</p>
+            </article>
+            <article class="card expertise-card reveal" data-reveal-delay="200">
+              <span class="expertise-card__ico" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 19V9m5.3 10V5m5.4 14V9.5M20 19V5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
+              <h3>Практический опыт масштабирования</h3>
+              <p>Проведение продуктов от стадии <strong>Idea до Pre-Seed / Seed</strong> с оценкой масштабирования в миллионы евро.</p>
+            </article>
+          </div>
+          <aside class="now-card card reveal">
+            <div>
+              <span class="now-card__label">Сейчас в работе</span>
+              <h3>Юрий поднимает раунд $2M для собственного стартапа Deus Tech 2.0</h3>
+              <p>AI-платформа автоматизации отбора генетического материала и повышения эффективности ЭКО (IVF). Направления — Robotics · MedTech · Fertility Clinics. Цель — снизить человеческую ошибку и поднять успешность протоколов ЭКО: сначала в Европе, затем в мире.</p>
+            </div>
+            <a class="btn--social btn--social--lg" href="https://www.linkedin.com/in/yury-ausianik-740a151b2/" target="_blank" rel="noopener" data-track="nowcard_linkedin">
+              Подробнее в LinkedIn
+            </a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 4. PRICING ============================ -->
+    <section id="pricing" class="section section--pricing">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Услуги и тарифы</p>
+          <h2 class="section__title">Три формата: от диагностики до личного сопровождения</h2>
+        </div>
+        <div class="pricing__grid">
+          <!-- Трипваер -->
+          <article class="card price-card reveal">
+            <div class="price-card__top">
+              <span class="price-card__tag">Точка входа</span>
+              <h3>Аудит привлечения капитала</h3>
+              <p class="price-card__desc">Определим, сколько денег нужно вашему бизнесу, где их выгоднее привлечь и что сделать для получения капитала.</p>
+            </div>
+            <div class="price-card__price">
+              <strong>€350</strong>
+              <span>разовый экспертный разбор + дорожная карта</span>
+            </div>
+            <ul class="price-card__list">
+              <li>Оценка потребности бизнеса в финансировании</li>
+              <li>Подбор источников капитала под ваш профиль</li>
+              <li>Дорожная карта действий по привлечению</li>
+            </ul>
+            <button class="btn btn--accent btn--block" data-open="modal-audit" data-track="cta_pricing_audit">
+              Записаться на аудит
+            </button>
+          </article>
+
+          <!-- Флагман -->
+          <article class="card price-card reveal" data-reveal-delay="150">
+            <div class="price-card__top">
+              <span class="price-card__tag">Под ключ</span>
+              <h3>Капитал Роста</h3>
+              <p class="price-card__desc">Индивидуально подготовим бизнес к привлечению капитала: от стратегии и финансовой модели до переговоров с инвесторами.</p>
+            </div>
+            <div class="price-card__price">
+              <strong>€1&nbsp;500</strong>
+              <span>4 недели плотной совместной работы под ключ</span>
+            </div>
+            <ul class="price-card__list">
+              <li>Инвестиционная стратегия</li>
+              <li>Построение финансовой модели</li>
+              <li>Разработка Pitch Deck и презентации</li>
+              <li>Формирование предложения инвестору</li>
+              <li>Поиск инвесторов и запуск переговоров</li>
+            </ul>
+            <button class="btn btn--accent btn--block" data-open="modal-capital" data-track="cta_pricing_capital">
+              Обсудить сопровождение
+            </button>
+          </article>
+
+          <!-- Премиум -->
+          <article class="card price-card price-card--featured price-card--premium reveal" data-reveal-delay="300">
+            <div class="price-card__top">
+              <span class="price-card__tag price-card__tag--featured">Личное сопровождение</span>
+              <h3>Личное сопровождение привлечения капитала</h3>
+              <p class="price-card__desc">Вы, Юрий и куратор ведем весь процесс: от стратегии до закрытия сделки и подготовки к следующему раунду.</p>
+            </div>
+            <div class="price-card__price">
+              <strong>€4&nbsp;990</strong>
+              <span>личное сопровождение до закрытия сделки + 2 месяца после</span>
+            </div>
+            <ul class="price-card__list">
+              <li>Инвестиционная стратегия</li>
+              <li>Построение финансовой модели</li>
+              <li>Разработка Pitch Deck и презентации</li>
+              <li>Формирование предложения инвестору</li>
+              <li>Поиск инвесторов и запуск переговоров</li>
+              <li>Каждый шаг согласовывается и корректируется лично Юрием и куратором</li>
+              <li>Личная помощь вплоть до закрытия сделки: участие в звонках с инвесторами</li>
+              <li>Еженедельные звонки в течение 2 месяцев после закрытия раунда — контроль стратегии и подготовка к следующему раунду</li>
+            </ul>
+            <button class="btn btn--gold btn--block" data-open="modal-premium" data-track="cta_pricing_premium">
+              Записаться на сопровождение
+            </button>
+          </article>
+        </div>
+        <p class="pricing__hint reveal">Не уверены, что подходит вашему этапу? <button class="link-btn" data-open="modal-audit">Начните с аудита</button> — это быстрый и дешевый способ получить ясность.</p>
+      </div>
+    </section>
+
+    <!-- ============================ 5. CASES ============================ -->
+    <section id="cases" class="section section--cases">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__label">Кейсы и результаты</p>
+          <h2 class="section__title">Было → Изменения → Результат</h2>
+        </div>
+        <div class="cases__list">
+          <article class="card case-card reveal">
+            <div class="case-card__col">
+              <span class="case-card__phase">Было</span>
+              <p>Сервис-стартап с растущей выручкой, но без финмодели. Инвесторы отвечали отказом.</p>
+            </div>
+            <div class="case-card__col case-card__col--mid">
+              <span class="case-card__phase">Изменения</span>
+              <p>Пересобрана финансовая модель, упакован pitch deck и предложение инвестору.</p>
+            </div>
+            <div class="case-card__col case-card__col--result">
+              <span class="case-card__phase">Результат</span>
+              <span class="case-card__result">€1,2M оценка и старт переговоров с фондом</span>
+            </div>
+          </article>
+
+          <article class="card case-card reveal">
+            <div class="case-card__col">
+              <span class="case-card__phase">Было</span>
+              <p>Продукт на стадии Idea. Нет понимания, какой капитал нужен и где его брать.</p>
+            </div>
+            <div class="case-card__col case-card__col--mid">
+              <span class="case-card__phase">Изменения</span>
+              <p>Валидирована бизнес-модель, выстроена карта источников финансирования ЕС.</p>
+            </div>
+            <div class="case-card__col case-card__col--result">
+              <span class="case-card__phase">Результат</span>
+              <span class="case-card__result">От Idea до Pre-Seed и грантовой заявки</span>
+            </div>
+          </article>
+
+          <article class="card case-card reveal">
+            <div class="case-card__col">
+              <span class="case-card__phase">Было</span>
+              <p>Понятный продукт, но «хаос» в поиске капитала и несистемные обращения к инвесторам.</p>
+            </div>
+            <div class="case-card__col case-card__col--mid">
+              <span class="case-card__phase">Изменения</span>
+              <p>Сегментирован список инвесторов, подготовлен сценарий переговоров.</p>
+            </div>
+            <div class="case-card__col case-card__col--result">
+              <span class="case-card__phase">Результат</span>
+              <span class="case-card__result">Запущены переговоры с 3 стратегическими партнерами</span>
+            </div>
+          </article>
+        </div>
+        <div class="testimonials reveal">
+          <blockquote class="testimonial">
+            <p>«Аудит сразу показал, что мы просили не тот объем и у не тех инвесторов. Воркбук и карта источников сэкономили месяцы проб».</p>
+            <cite>Предприниматель, SaaS-проект (отзыв участника Аудита)</cite>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>«Через 4 недели программы у нас были финмодель, готовый deck и первые встречи. Ощущение хаоса сменилось планом».</p>
+            <cite>Основатель, marketplace (программа «Капитал Роста»)</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 6. FAQ ============================ -->
+    <section id="faq" class="section section--faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <p class="section__label">FAQ</p>
+          <h2 class="section__title">Частые вопросы</h2>
+        </div>
+        <div class="faq__list" data-faq>
+          <details class="card faq-item reveal">
+            <summary>Чем отличается Аудит от программы «Капитал Роста»?</summary>
+            <div class="faq-item__body"><p>Аудит — это быстрая диагностика и дорожная карта (€350). «Капитал Роста» — четыре недели совместной работы под ключ (€1 500): стратегия, финмодель, deck, предложение инвестору, поиск инвесторов и переговоры. «Личное сопровождение» (€4 990) — работа лично с Юрием и куратором вплоть до закрытия сделки и 2 месяца контроля после раунда.</p></div>
+          </details>
+          <details class="card faq-item reveal">
+            <summary>На каком этапе развития бизнеса стоит подавать заявку?</summary>
+            <div class="faq-item__body"><p>От стадии Idea до Pre-Seed / Seed. Мы работаем с продуктами, где уже есть подтвержденный спрос или первые метрики, и помогаем превратить их в инвестиционно привлекательную упаковку.</p></div>
+          </details>
+          <details class="card faq-item reveal">
+            <summary>В каком формате проходят личные встречи и консультации?</summary>
+            <div class="faq-item__body"><p>В онлайн-формате: Zoom / Google Meet, с понятным воркбуком и домашними заданиями между созвонами. По договоренности возможны очные встречи.</p></div>
+          </details>
+          <details class="card faq-item reveal">
+            <summary>Как происходит оплата?</summary>
+            <div class="faq-item__body"><p>Оплата в евро (€) картой или по счету. Для аудита — полная предоплата. Для программы «Капитал Роста» возможна рассрочка на 2–3 платежа по индивидуальной договоренности.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 7. FINAL CTA ============================ -->
+    <section class="section section--final">
+      <div class="container">
+        <div class="final-card reveal">
+          <div class="final-card__glow" aria-hidden="true"></div>
+          <h2>Начните с ясности по вашему капиталу</h2>
+          <p>Запишитесь на аудит — займет 30 минут, вернет карту действий на месяцы вперед.</p>
+          <button class="btn btn--accent btn--lg" data-open="modal-audit" data-track="cta_final">
+            Записаться на аудит — €350
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="brand" href="#top">
+          <span class="brand__mark">ЮА</span>
+          <span class="brand__text">Юрий Авсянник</span>
+        </a>
+        <p>Экспертный аудит и сопровождение по привлечению капитала для технологических предпринимателей.</p>
+      </div>
+      <div class="footer__nav">
+        <h4>Навигация</h4>
+        <a href="#pains">С чем приходят</a>
+        <a href="#expertise">Экспертность</a>
+        <a href="#pricing">Услуги и цены</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer__contact">
+        <h4>Связь</h4>
+        <a href="mailto:hello@yuri-avsyanik.com">hello@yuri-avsyanik.com</a>
+        <div class="footer__socials">
+          <a href="https://www.instagram.com/ausianikyury/" target="_blank" rel="noopener" data-track="social_instagram" aria-label="Instagram">Instagram</a>
+          <a href="https://www.linkedin.com/in/yury-ausianik-740a151b2/" target="_blank" rel="noopener" data-track="social_linkedin" aria-label="LinkedIn">LinkedIn</a>
+          <a href="mailto:hello@yuri-avsyanik.com" data-track="social_email" aria-label="Электронная почта">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__legal">
+      <p>© <span data-year>2026</span> Юрий Авсянник. Все права защищены.</p>
+      <p><a href="#privacy">Политика конфиденциальности</a> · <a href="#terms">Условия предоставления услуг</a></p>
+    </div>
+  </footer>
+
+  <!-- ============================ MODAL: AUDIT ============================ -->
+  <div class="modal" id="modal-audit" role="dialog" aria-modal="true" aria-labelledby="modal-audit-title" data-modal>
+    <div class="modal__backdrop" data-close="modal-audit"></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" data-close="modal-audit" aria-label="Закрыть окно">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 3l12 12M15 3L3 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+
+      <!-- Шаг 1: данные -->
+      <form class="modal-step" data-form-step="1" novalidate>
+        <p class="modal__label">Аудит привлечения капитала · €350</p>
+        <h3 class="modal__title" id="modal-audit-title">Запишитесь на аудит</h3>
+        <p class="modal__sub">Оставьте контакт — в течение 24 часов согласуем время разбора.</p>
+        <input type="hidden" name="offer" value="audit">
+        <input type="hidden" name="price" value="350">
+        <div class="field">
+          <label for="a-name">Имя</label>
+          <input id="a-name" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" required>
+          <span class="field__error">Укажите имя</span>
+        </div>
+        <div class="field">
+          <label for="a-contact">Telegram / WhatsApp</label>
+          <input id="a-contact" name="contact" type="text" placeholder="@username или +380…" required>
+          <span class="field__error">Укажите Telegram или WhatsApp</span>
+        </div>
+        <div class="field">
+          <label for="a-site">Ссылка на проект / сайт</label>
+          <input id="a-site" name="project" type="url" placeholder="https://…">
+          <span class="field__error">Введите корректную ссылку</span>
+        </div>
+        <button type="submit" class="btn btn--accent btn--block" data-track="fr_audit_step1">
+          Перейти к оформлению аудита
+        </button>
+        <p class="modal__policy">Отправляя форму, вы соглашаетесь с политикой конфиденциальности.</p>
+      </form>
+
+      <!-- Шаг 2: оформление -->
+      <div class="modal-step" data-form-step="2" hidden>
+        <p class="modal__label">Аудит привлечения капитала</p>
+        <h3 class="modal__title">Почти готово</h3>
+        <div class="modal__summary">
+          <div class="modal__summary-row"><span>Услуга</span><strong>Аудит привлечения капитала</strong></div>
+          <div class="modal__summary-row"><span>Стоимость</span><strong>€350</strong></div>
+          <div class="modal__summary-row"><span>Формат</span><strong>Экспертный разбор + дорожная карта</strong></div>
+        </div>
+        <p class="modal__note">Нажмите кнопку — заявка уйдет напрямую Юрию, а ссылку на оплату пришлем в Telegram.</p>
+        <button type="button" class="btn btn--accent btn--block" data-submit="audit" data-track="fr_audit_step2">
+          Подтвердить и отправить заявку
+        </button>
+        <button type="button" class="modal__back" data-back="1">← Назад</button>
+      </div>
+
+      <!-- Успех -->
+      <div class="modal-step" data-success hidden>
+        <span class="modal__success-ico" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="modal__title">Заявка отправлена!</h3>
+        <p class="modal__sub">Спасибо. Свяжемся с вами в ближайшие часы. Проверьте Telegram/WhatsApp.</p>
+        <button type="button" class="btn btn--ghost btn--block" data-close="modal-audit">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ MODAL: CAPITAL ============================ -->
+  <div class="modal" id="modal-capital" role="dialog" aria-modal="true" aria-labelledby="modal-capital-title" data-modal>
+    <div class="modal__backdrop" data-close="modal-capital"></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" data-close="modal-capital" aria-label="Закрыть окно">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 3l12 12M15 3L3 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+
+      <!-- Шаг 1 -->
+      <form class="modal-step" data-form-step="1" novalidate>
+        <p class="modal__label">Капитал Роста · €1 500 / 4 недели</p>
+        <h3 class="modal__title" id="modal-capital-title">Обсудить сопровождение</h3>
+        <p class="modal__sub">Оставьте контакт — на созвоне разберем вашу ситуацию.</p>
+        <input type="hidden" name="offer" value="capital-growth">
+        <input type="hidden" name="price" value="1500">
+        <div class="field">
+          <label for="c-name">Имя</label>
+          <input id="c-name" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" required>
+          <span class="field__error">Укажите имя</span>
+        </div>
+        <div class="field">
+          <label for="c-contact">Телефон / Telegram</label>
+          <input id="c-contact" name="contact" type="text" placeholder="@username или +380…" required>
+          <span class="field__error">Укажите телефон или Telegram</span>
+        </div>
+        <button type="submit" class="btn btn--gold btn--block" data-track="fr_capital_step1">Далее</button>
+        <p class="modal__policy">Отправляя форму, вы соглашаетесь с политикой конфиденциальности.</p>
+      </form>
+
+      <!-- Шаг 2 -->
+      <form class="modal-step" data-form-step="2" hidden novalidate>
+        <p class="modal__label">Капитал Роста</p>
+        <h3 class="modal__title">Расскажите о бизнесе</h3>
+        <div class="field">
+          <label for="c-desc">Описание текущего бизнеса</label>
+          <textarea id="c-desc" name="description" rows="3" placeholder="Продукт, стадия, что уже есть" required></textarea>
+          <span class="field__error">Опишите бизнес в двух словах</span>
+        </div>
+        <div class="field">
+          <label for="c-amount">Запрашиваемая сумма инвестиций</label>
+          <input id="c-amount" name="amount" type="text" placeholder="Например, €500 000" required>
+          <span class="field__error">Укажите сумму</span>
+        </div>
+        <button type="submit" class="btn btn--gold btn--block" data-track="fr_capital_step2">
+          Отправить заявку на обсуждение
+        </button>
+        <button type="button" class="modal__back" data-back="1">← Назад</button>
+      </form>
+
+      <!-- Успех -->
+      <div class="modal-step" data-success hidden>
+        <span class="modal__success-ico" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="modal__title">Заявка отправлена!</h3>
+        <p class="modal__sub">Спасибо. Свяжемся с вами в ближайшие часы. Проверьте телефон/Telegram.</p>
+        <button type="button" class="btn btn--ghost btn--block" data-close="modal-capital">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ MODAL: PREMIUM ============================ -->
+  <div class="modal" id="modal-premium" role="dialog" aria-modal="true" aria-labelledby="modal-premium-title" data-modal>
+    <div class="modal__backdrop" data-close="modal-premium"></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" data-close="modal-premium" aria-label="Закрыть окно">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 3l12 12M15 3L3 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+
+      <!-- Шаг 1 -->
+      <form class="modal-step" data-form-step="1" novalidate>
+        <p class="modal__label">Личное сопровождение привлечения капитала · €4 990</p>
+        <h3 class="modal__title" id="modal-premium-title">Записаться на сопровождение</h3>
+        <p class="modal__sub">Оставьте контакт — выйдем на связь и обсудим вашу сделку.</p>
+        <input type="hidden" name="offer" value="premium">
+        <input type="hidden" name="price" value="4990">
+        <div class="field">
+          <label for="p-name">Имя</label>
+          <input id="p-name" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" required>
+          <span class="field__error">Укажите имя</span>
+        </div>
+        <div class="field">
+          <label for="p-contact">Телефон / Telegram</label>
+          <input id="p-contact" name="contact" type="text" placeholder="@username или +380…" required>
+          <span class="field__error">Укажите телефон или Telegram</span>
+        </div>
+        <button type="submit" class="btn btn--gold btn--block" data-track="fr_premium_step1">Далее</button>
+        <p class="modal__policy">Отправляя форму, вы соглашаетесь с политикой конфиденциальности.</p>
+      </form>
+
+      <!-- Шаг 2 -->
+      <form class="modal-step" data-form-step="2" hidden novalidate>
+        <p class="modal__label">Личное сопровождение привлечения капитала</p>
+        <h3 class="modal__title">Расскажите о бизнесе</h3>
+        <div class="field">
+          <label for="p-desc">Описание текущего бизнеса</label>
+          <textarea id="p-desc" name="description" rows="3" placeholder="Продукт, стадия, что уже есть" required></textarea>
+          <span class="field__error">Опишите бизнес в двух словах</span>
+        </div>
+        <div class="field">
+          <label for="p-amount">Запрашиваемая сумма инвестиций</label>
+          <input id="p-amount" name="amount" type="text" placeholder="Например, €500 000" required>
+          <span class="field__error">Укажите сумму</span>
+        </div>
+        <button type="submit" class="btn btn--gold btn--block" data-track="fr_premium_step2">
+          Отправить заявку
+        </button>
+        <button type="button" class="modal__back" data-back="1">← Назад</button>
+      </form>
+
+      <!-- Успех -->
+      <div class="modal-step" data-success hidden>
+        <span class="modal__success-ico" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 class="modal__title">Заявка отправлена!</h3>
+        <p class="modal__sub">Спасибо. Свяжемся с вами в ближайшие часы. Проверьте телефон/Telegram.</p>
+        <button type="button" class="btn btn--ghost btn--block" data-close="modal-premium">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" data-toast role="status" aria-live="polite" hidden></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
