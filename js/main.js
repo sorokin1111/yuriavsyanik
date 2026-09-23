@@ -227,6 +227,8 @@
   }
 
   function resetModalSteps(m) {
+    sending = false;
+    $$('button[type="submit"], [data-submit]', m).forEach(function (b) { b.disabled = false; });
     $$('[data-form-step]', m).forEach(function (step) {
       var isFirst = step.getAttribute('data-form-step') === '1';
       step.hidden = !isFirst;
@@ -294,14 +296,35 @@
     return data;
   }
 
-  function sendLead(form, type) {
-    var data = collectForm(form);
+  /* Сбор данных всей модалки (нужно для многошаговых форм:
+     имя/контакт на шаге 1, описание/сумма на шаге 2) */
+  function collectAll(modal) {
+    var data = {};
+    $$('input, textarea', modal).forEach(function (f) {
+      if (f.name) data[f.name] = f.value;
+    });
+    var utm = getUTMParams();
+    Object.keys(utm).forEach(function (k) { data[k] = utm[k]; });
+    data.page = pagePath();
+    data.referrer = document.referrer || '';
+    data.ts = new Date().toISOString();
+    return data;
+  }
+
+  var sending = false;
+
+  function sendLead(source, type) {
+    if (sending) return;
+    sending = true;
+
+    var data = source.hasAttribute('data-modal') ? collectAll(source) : collectForm(source);
     var payload = JSON.stringify(data);
 
     track('initiate_checkout', { offer: data.offer, price: data.price, page_path: pagePath() });
     trackLead({ offer: data.offer, price: data.price, contact: data.contact ? 'yes' : 'no' });
 
-    var modal = form.closest('[data-modal]');
+    var modal = source.closest('[data-modal]');
+    if (modal) $$('button[type="submit"], [data-submit]', modal).forEach(function (b) { b.disabled = true; });
 
     if (CONFIG.webhookUrl) {
       var controller = new AbortController();
@@ -320,11 +343,14 @@
         })
         .catch(function (err) {
           clearTimeout(timeout);
+          sending = false;
+          if (modal) $$('button[type="submit"], [data-submit]', modal).forEach(function (b) { b.disabled = false; });
           /* Fallback: если webhook недоступен — открываем почтовый клиент с данными */
           window.location.href = buildMailto(data);
           finishLead(modal, data);
         });
     } else {
+      sending = false;
       /* Webhook не настроен — fallback на почтовый клиент */
       window.location.href = buildMailto(data);
       finishLead(modal, data);
@@ -399,10 +425,10 @@
       var stepNum = form.getAttribute('data-form-step');
 
       if (offer === 'capital' || offer === 'premium') {
-        /* Капитал: шаг 1 → шаг 2; шаг 2 → отправка */
+        /* Капитал: шаг 1 → шаг 2; шаг 2 → отправка (собираем всю модалку: имя, контакт, описание, сумму) */
         if (stepNum === '2') {
           track('fr_step', { modal: modal.id, step: 2 });
-          sendLead(form, offer);
+          sendLead(modal, offer);
         } else {
           showStep(modal, 2);
         }
