@@ -8,7 +8,7 @@
   /* ======== КОНФИГУРАЦИЯ ========
      Впишите свои значения перед деплоем. */
   var CONFIG = {
-    webhookUrl: '',        // Make / n8n endpoint. Пусто = fallback на mailto
+    webhookUrl: '/api/telegram', // Эндпоинт приёма заявок. Telegram-бот шлёт в env TELEGRAM_CHAT_ID. Пусто = fallback на mailto
     paymentUrl: {
       audit: '',           // ссылка на оплату Auditu (если есть)
       capital: '',         // ссылка на оплату «Капитал Роста»
