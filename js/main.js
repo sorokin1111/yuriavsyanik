@@ -290,7 +290,7 @@
     /* UTM-проброс в скрытые поля для webhook/CRM */
     var utm = getUTMParams();
     Object.keys(utm).forEach(function (k) { data[k] = utm[k]; });
-    data.page = pagePath();
+    data.page = location.origin + pagePath();
     data.referrer = document.referrer || '';
     data.ts = new Date().toISOString();
     return data;
@@ -305,7 +305,7 @@
     });
     var utm = getUTMParams();
     Object.keys(utm).forEach(function (k) { data[k] = utm[k]; });
-    data.page = pagePath();
+    data.page = location.origin + pagePath();
     data.referrer = document.referrer || '';
     data.ts = new Date().toISOString();
     return data;

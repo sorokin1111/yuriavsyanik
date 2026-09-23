@@ -25,7 +25,7 @@ function buildMessage(data) {
   if (data.description) lines.push('<b>О бизнесе:</b> ' + escapeHtml(data.description));
   if (data.amount) lines.push('<b>Сумма инвестиций:</b> ' + escapeHtml(data.amount));
   lines.push('');
-  lines.push('<b>Страница:</b> ' + escapeHtml(data.page || '—'));
+  if (data.page) lines.push('<b>Страница:</b> <a href="' + escapeHtml(data.page) + '">' + escapeHtml(data.page) + '</a>');
 
   ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(function (k) {
     if (data[k]) lines.push('<code>' + escapeHtml(k) + '</code>: ' + escapeHtml(data[k]));
