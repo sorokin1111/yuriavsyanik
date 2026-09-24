@@ -554,6 +554,7 @@ body.no-scroll { overflow: hidden; }
 .modal__summary-row span { color: var(--muted); }
 .modal__summary-row strong { color: var(--text); font-weight: 700; text-align: right; }
 .modal__note { color: var(--muted); font-size: 13.5px; margin-bottom: 20px; }
+.modal__note--error { color: var(--red, #e5484d); }
 
 .modal__success-ico {
   display: grid; place-items: center; width: 64px; height: 64px; margin-bottom: 18px;

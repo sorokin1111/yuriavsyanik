@@ -8,7 +8,7 @@
   /* ======== КОНФИГУРАЦИЯ ========
      Впишите свои значения перед деплоем. */
   var CONFIG = {
-    webhookUrl: '/api/telegram', // Эндпоинт приёма заявок. Telegram-бот шлёт в env TELEGRAM_CHAT_ID. Пусто = fallback на mailto
+    webhookUrl: '/api/telegram', // Эндпоинт приёма заявок. Telegram-бот шлёт в env TELEGRAM_CHAT_ID
     paymentUrl: {
       audit: '',           // ссылка на оплату Auditu (если есть)
       capital: '',         // ссылка на оплату «Капитал Роста»
@@ -345,32 +345,24 @@
           clearTimeout(timeout);
           sending = false;
           if (modal) $$('button[type="submit"], [data-submit]', modal).forEach(function (b) { b.disabled = false; });
-          /* Fallback: если webhook недоступен — открываем почтовый клиент с данными */
-          window.location.href = buildMailto(data);
-          finishLead(modal, data);
+          if (modal) setFormError(modal, 'Не удалось отправить заявку. Повторите попытку или напишите в Telegram: @Deus_Tech');
+          else toast('Не удалось отправить заявку. Повторите попытку или напишите в Telegram: @Deus_Tech');
         });
     } else {
       sending = false;
-      /* Webhook не настроен — fallback на почтовый клиент */
-      window.location.href = buildMailto(data);
-      finishLead(modal, data);
+      if (modal) setFormError(modal, 'Не удалось отправить заявку. Повторите попытку или напишите в Telegram: @Deus_Tech');
+      else toast('Не удалось отправить заявку. Повторите попытку или напишите в Telegram: @Deus_Tech');
     }
 
     return data;
   }
 
-  var offerLabels = {
-    audit: 'Аудит',
-    'capital-growth': 'Капитал Роста',
-    premium: 'Личное сопровождение'
-  };
-
-  function buildMailto(data) {
-    var subject = encodeURIComponent('Заявка: ' + (offerLabels[data.offer] || 'Аудит'));
-    var body = encodeURIComponent(
-      Object.keys(data).map(function (k) { return k + ': ' + data[k]; }).join('\n')
-    );
-    return 'mailto:hello@yuri-avsyanik.com?subject=' + subject + '&body=' + body;
+  function setFormError(modal, message) {
+    var note = $('.modal__note', modal);
+    if (note) {
+      note.textContent = message;
+      note.classList.add('modal__note--error');
+    }
   }
 
   function finishLead(modal, data) {
