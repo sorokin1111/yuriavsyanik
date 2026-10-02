@@ -408,6 +408,105 @@ body.no-scroll { overflow: hidden; }
 
 .pricing__hint { text-align: center; color: var(--muted); margin-top: 30px; font-size: 15px; }
 
+/* ---------- Stages: путь привлечения капитала ---------- */
+.stages { margin-top: clamp(56px, 7vw, 88px); scroll-margin-top: 90px; }
+.stages__head { max-width: 760px; margin-bottom: clamp(32px, 4vw, 48px); }
+.stages__label {
+  display: inline-block; font-family: var(--font-display);
+  font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 14px;
+}
+.stages__title { font-family: var(--font-display); font-weight: 600; font-size: clamp(22px, 3vw, 34px); line-height: 1.24; }
+.stages__lead { margin-top: 14px; color: var(--muted); font-size: 15.5px; }
+
+.stage-group {
+  padding: clamp(26px, 3.4vw, 40px);
+  background: linear-gradient(180deg, var(--panel) 0%, var(--bg-raised) 100%);
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+}
+.stage-group + .stage-group { margin-top: 22px; }
+.stage-group--capital { border-color: rgba(235, 170, 61, 0.28); }
+
+.stage-group__head { margin-bottom: 22px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.stage-group__tag {
+  display: inline-block; margin-bottom: 16px; padding: 5px 12px; border-radius: 999px;
+  font-size: 11.5px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold-bright); background: rgba(235, 170, 61, 0.12);
+  border: 1px solid rgba(235, 170, 61, 0.3);
+}
+.stage-group__title { font-family: var(--font-display); font-weight: 600; font-size: clamp(19px, 2.4vw, 26px); }
+.stage-group__desc { margin-top: 10px; color: var(--muted); font-size: 15px; max-width: 760px; }
+
+.stage-group__list { display: flex; flex-direction: column; gap: 10px; }
+
+.stage-item {
+  overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.015);
+  transition: border-color 0.25s var(--ease), background 0.25s var(--ease);
+}
+.stage-item:hover { border-color: var(--line-strong); }
+.stage-item[open] { border-color: rgba(235, 170, 61, 0.4); background: rgba(235, 170, 61, 0.04); }
+
+.stage-item summary {
+  position: relative; display: grid; grid-template-columns: auto 1fr; gap: 18px;
+  align-items: start; padding: 18px 58px 18px 20px;
+}
+.stage-item summary::after {
+  content: "+"; position: absolute; right: 20px; top: 19px;
+  font-family: var(--font-body); font-weight: 400; font-size: 24px; line-height: 1;
+  color: var(--gold); transition: transform 0.3s var(--ease);
+}
+.stage-item[open] summary::after { transform: rotate(45deg); }
+.stage-item[open] .stage-item__name { color: var(--gold-bright); }
+
+.stage-item__num {
+  min-width: 2.6em; height: fit-content; padding: 3px 8px; text-align: center;
+  font-family: var(--font-display); font-size: 14px; font-weight: 600; line-height: 1.4;
+  color: var(--gold); border: 1px solid rgba(235, 170, 61, 0.3); border-radius: 10px;
+}
+.stage-item__text { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.stage-item__name { overflow-wrap: break-word; font-family: var(--font-display); font-weight: 600; font-size: 16.5px; line-height: 1.4; transition: color 0.2s; }
+.stage-item__result { overflow-wrap: break-word; color: var(--muted); font-size: 13.5px; line-height: 1.5; }
+.stage-item__result-label { color: var(--gold); font-weight: 700; }
+.stage-item__flag {
+  display: inline-block; max-width: 100%; margin-left: 8px; padding: 3px 10px; vertical-align: middle;
+  font-family: var(--font-body); font-size: 11.5px; font-weight: 700; letter-spacing: 0.02em;
+  color: var(--gold-bright); background: rgba(235, 170, 61, 0.12);
+  border: 1px solid rgba(235, 170, 61, 0.28); border-radius: 999px;
+}
+
+.stage-item__body { padding: 0 20px 4px; }
+.stage-item__body li {
+  position: relative; margin-bottom: 10px; padding-left: 24px;
+  font-size: 14.5px; line-height: 1.6; color: var(--text-soft);
+}
+.stage-item__body li::before {
+  content: ""; position: absolute; left: 4px; top: 10px;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--gold); opacity: 0.75;
+}
+.stage-item__note {
+  margin: 8px 20px 20px; padding: 12px 14px;
+  border-left: 2px solid rgba(235, 170, 61, 0.5); border-radius: 0 10px 10px 0;
+  background: rgba(235, 170, 61, 0.06); color: var(--muted); font-size: 13.5px; line-height: 1.55;
+}
+
+.stage-group__total { margin-top: 20px; font-size: 14.5px; line-height: 1.6; color: var(--muted); }
+.stage-group__total-label {
+  display: block; margin-bottom: 8px;
+  font-family: var(--font-display); font-size: 11.5px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);
+}
+
+.stages__aside {
+  margin-top: 22px; padding: 22px 26px;
+  border: 1px dashed rgba(235, 170, 61, 0.4); border-radius: var(--radius-md);
+  background: rgba(235, 170, 61, 0.04);
+}
+.stages__aside-title { font-family: var(--font-display); font-weight: 600; font-size: 16px; color: var(--gold-bright); margin-bottom: 8px; }
+.stages__aside-text { color: var(--muted); font-size: 14px; line-height: 1.6; }
+
+.stages__disclaimer { margin-top: 22px; max-width: 880px; color: var(--muted-2); font-size: 13px; line-height: 1.6; }
+
 /* ---------- Cases ---------- */
 .cases__list { display: flex; flex-direction: column; gap: 16px; margin-bottom: clamp(36px, 4vw, 52px); }
 .case-card {
@@ -624,4 +723,16 @@ body.no-scroll { overflow: hidden; }
   .faq-item summary { padding: 20px 20px 20px 50px; font-size: 15px; }
   .faq-item summary::after { right: 18px; }
   .faq-item__body { padding: 0 20px 22px 24px; }
+
+  .stages { margin-top: 44px; }
+  .stage-item summary { gap: 14px; padding: 16px 42px 16px 14px; }
+  .stage-item summary::after { right: 14px; top: 16px; font-size: 22px; }
+  .stage-item__num { min-width: 2.2em; padding: 2px 5px; font-size: 13px; }
+  .stage-item__name { font-size: 15px; }
+  .stage-item__result { font-size: 12.5px; }
+  .stage-item__flag { display: block; width: fit-content; margin: 8px 0 0; }
+  .stage-item__body { padding: 0 14px 4px; }
+  .stage-item__body li { padding-left: 20px; font-size: 14px; }
+  .stage-item__note { margin: 8px 14px 18px; }
+  .stages__aside { padding: 18px; }
 }
